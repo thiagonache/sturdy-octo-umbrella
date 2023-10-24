@@ -1,6 +1,6 @@
 projects:
-  - name: talend
-    dir: terraform
+  - name: talend-dev
+    dir: terraform/dev
     workflow: talend
 workflows:
   talend:

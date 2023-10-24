@@ -10,8 +10,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  digger-terraform:
+  digger-terraform-dev:
     runs-on: ubuntu-latest
+    environment: dev
 
     steps:
       - uses: actions/checkout@v4
