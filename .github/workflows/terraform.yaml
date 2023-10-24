@@ -1,0 +1,4 @@
+name: Terraform Digger
+
+on:
+  workflow_dispatch:
