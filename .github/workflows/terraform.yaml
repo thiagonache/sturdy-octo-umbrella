@@ -14,7 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          fetch-tags: false
 
       - name: Install hub
         run: sudo apt install -y hub
@@ -48,6 +51,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_STORAGE_BUCKET: "thiago-carvalho-test"
         with:
+          configure-checkout: false
           setup-checkov: true
           setup-google-cloud: false
           setup-terraform: true
